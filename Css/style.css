@@ -1,0 +1,187 @@
+/*
+reset
+*/
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+*{
+    /*Supprimer toute les marges*/
+    margin: 0;
+    padding: 0;
+
+    /*Integrer les bordures et padding dans la taille de balise (Bloc/boite)*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*Ramener la valeur 1rem a 10px*/
+html{
+    font-size: 62.5%;/* => 10 px =1 rem*/
+}
+/*Mettre les images à la même taille que les figures*/
+img{
+    max-width: 100%;
+}
+
+/*Body est parent donc il emblobe tout ses éléments*/
+body{
+    font-size: 1.5rem;
+    color: white;
+    font-family: sans-serif;
+    background-color: #131313;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: 'Helvetica', sans-serif;
+    /*mettre en majuscules*/
+    text-transform: uppercase;
+}
+
+
+/*HEADER*/
+header{
+    /*ajouter une image de fond*/
+    background-image: url('../img/Image1.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /*faire en sorte que Header fasse la hauteur de la fenêtre*/
+    height: 100vh;
+    /*bloquer la balise enfant dans le header*/
+    position: relative;
+}
+
+h1{
+    font-size: 5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+}
+
+h1 span {
+    font-size: 0.4em;
+    font-family: serif;
+    display: block;
+    text-transform: none;
+
+}
+a {
+    /*pas de couleur sur les liens*/
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    /*pas de puce*/
+    list-style-type: none;
+}
+
+
+/*Selectionner une ID */
+#siteLogo {
+    width: 4rem;    
+    /*changer le type de balise*/
+    display: block;
+    padding-top: 2rem;
+}
+
+nav{
+    /*définir la largeur max de la nav*/
+    max-width: 90rem;
+    /*centrer dans la largueur une balise block réduite*/
+    margin: auto;
+}
+
+nav ul {
+    background-color: #131313;
+    /*sortir la balise du fluc pour la figer, jouer ensuite sur la position pour positionner ou on veut*/
+    position: fixed;
+    top: 0;
+    right: -18rem;
+    height: 100vh; /*vh = hauteur de la fenêtre de navigateur*/
+    padding: 4rem;
+}
+nav section { 
+    max-width: 80rem;
+    margin: auto;
+}
+
+nav button {
+
+    color: white;
+    background: black;
+    border: none;
+    /*sortir la balise du flux pour la figer en haut a droite*/
+    position: fixed;
+    z-index: 1;
+    top: 2rem;
+    right: 2rem;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+/*MAIN*/
+
+section{
+    margin-bottom: 15rem;
+    padding-top: 2rem;
+}
+
+h2{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+main ul{
+    max-width: 30rem;
+    margin: auto;
+}
+
+main li{
+    margin-bottom: 1rem;
+}
+
+.callToAction{
+    font-size: 1,8rem;
+    color: black;
+    background-color: rgb(0, 162, 224);
+    padding: 1rem;
+    margin-top: 1rem;
+    display: inline-block;
+    border-bottom: 0.5rem solid #131313;
+}
+
+figure {
+    display: inline-block;
+    width: 30%;
+    border: 1rem solid #131313; 
+}
+
+/*bloquer des enfants dans les parents*/
+figure { 
+    position: relative;
+}
+figcaption {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 50%;
+    padding: 1rem;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    
+}
+
+figcaption span {
+    background-color: black;
+    display: block;
+}
+/**/
